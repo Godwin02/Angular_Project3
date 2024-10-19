@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form [formGroup]="addform" (ngSubmit)="saveData()" class="addForm">
+    <h1>Add Product</h1>
+    <input type="text" formControlName="productName" placeholder="Product Name">
+    <input type="text" formControlName="productPrice" placeholder="Product Price">
+    <input type="text" formControlName="productStock" placeholder="Product Stock">
+    <button type="submit" class="button">Add</button>
+</form>
+</body>
+</html>

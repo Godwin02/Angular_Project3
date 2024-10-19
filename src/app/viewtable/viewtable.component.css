@@ -1,0 +1,13 @@
+.table{
+    width: 100%;
+    height: max-content;
+}
+.table th{
+    border: 1px solid antiquewhite;
+    color: antiquewhite;
+}
+.table td{
+    border: 1px solid antiquewhite;
+    color: antiquewhite;
+    font-weight: bolder;
+}
