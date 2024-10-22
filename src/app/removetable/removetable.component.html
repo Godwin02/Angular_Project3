@@ -15,12 +15,12 @@
                 <th>STOCK</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let products of productData ,index as i">
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{i+1}}</td>
+                <td>{{products.productName}}</td>
+                <td>{{products.productPrice}}</td>
+                <td>{{products.productStock}}</td>
             </tr>
         </tbody>
     </table>

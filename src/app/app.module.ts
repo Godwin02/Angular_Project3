@@ -10,6 +10,7 @@ import { RemovetableComponent } from './removetable/removetable.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
     AddproductComponent,
     ViewtableComponent,
     RemovetableComponent,
-    HomeComponent
+    HomeComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,

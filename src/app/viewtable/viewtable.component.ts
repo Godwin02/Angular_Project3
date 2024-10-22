@@ -10,13 +10,20 @@ import { Product_table } from '../product.model';
 })
 export class ViewtableComponent implements OnInit {
 
-  constructor(private prservice:ProductServiceService,private r:Router) { }
+  constructor(private prservice: ProductServiceService, private r: Router) { }
 
-productData:Product_table[]=[];
-ngOnInit(): void {
-  this.prservice.viewdata().subscribe((data1:any)=>
-  {
-    this.productData=data1;
-  });
-}
+  productData: Product_table[] = [];
+  ngOnInit(): void {
+    this.prservice.viewdata().subscribe((data1: any) => {
+      this.productData = data1;
+    });
+  }
+  deleteProduct(id: number) {
+    this.prservice.removedata(id).subscribe((data1: any) => {
+      this.ngOnInit();
+    });
+  }
+  updateProduct(id:number){
+    this.r.navigate(['/updateProduct',id])
+  }
 }

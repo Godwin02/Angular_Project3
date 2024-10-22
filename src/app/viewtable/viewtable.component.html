@@ -13,6 +13,8 @@
                 <th>PRDUCT NAME</th>
                 <th>PRICE</th>
                 <th>STOCK</th>
+                <th>DELETE</th>
+                <th>UPDATE</th>
             </tr>
         </thead>
         <tbody *ngFor="let products of productData">
@@ -21,6 +23,9 @@
                 <td>{{products.productName}}</td>
                 <td>{{products.productPrice}}</td>
                 <td>{{products.productStock}}</td>
+
+                <td><button (click)="deleteProduct(products.productId)">DELETE</button></td>
+                <td><button (click)="updateProduct(products.productId)">UPDATE</button></td>
             </tr>
         </tbody>
     </table>
